@@ -79,11 +79,47 @@ public class Main {
 
     } //Пятое задание
     static void Task_Six(){
-        System.out.println("Проверка гитхаба");
     } //Шестое задание
     static void Task_Seven(){
     } //Седьмое задание
     static void Task_Eight(){
+        /* Аргументы для ввода */
+        double x;
+        Scanner x_num = new Scanner(System.in);
+        double begin;
+        Scanner begin_num = new Scanner(System.in);
+        double end;
+        Scanner end_num = new Scanner(System.in);
+        double step;
+        Scanner step_num = new Scanner(System.in);
+
+        int user_choose = 0;
+        Scanner user_choose_num = new Scanner(System.in);
+        System.out.println("Функциональный калькулятор");
+        /* Ввод аргументов */
+        System.out.println("Введите х: ");
+        x = x_num.nextDouble();
+        System.out.println("Введите begin: ");
+        begin = begin_num.nextDouble();
+        System.out.println("Введите end: ");
+        end = end_num.nextDouble();
+        System.out.println("Введите step: ");
+        step = step_num.nextDouble();
+        Calculate x_arg = new Calculate(x,begin,end,step);
+
+        System.out.println("Введите номер фукнции 1-2: ");
+        user_choose = user_choose_num.nextInt();
+        if(user_choose==1){
+            x_arg.function_one();
+        }
+        else if(user_choose==2){
+            x_arg.function_two();
+        }
+        else{
+            System.out.println("Вы ввели что-то не так");
+        }
+
+
     } // Восьмое задание
     /* Task List */
     public static void main(String[] args) {
