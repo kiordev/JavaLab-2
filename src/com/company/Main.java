@@ -37,32 +37,7 @@ public class Main {
 
     } //Второе задание
     static void Task_Three(){} //Третье задание //НЕ ГОТОВО
-    static void Task_Four(){
-        /* Переменные для создания второго комплексного числа */
-        int x;
-        Scanner x_num = new Scanner(System.in);
-        int i;
-        Scanner i_num = new Scanner(System.in);
-        int y;
-        Scanner y_num = new Scanner(System.in);
-        /* Cоздания первого комплексного числа */
-        System.out.println("Создайте первое комплексное число: x i y");
-        x = x_num.nextInt();
-        i = i_num.nextInt();
-        y = y_num.nextInt();
-        ComplexNum first_compex_num = new ComplexNum(x,i,y);
-        /* Cоздания второго комплексного числа */
-        System.out.println("Создайте второе комплексное число: x i y");
-        x = x_num.nextInt();
-        i = i_num.nextInt();
-        y = y_num.nextInt();
-        ComplexNum second_compex_num = new ComplexNum(x,i,y);
-        System.out.println("Комплексные числа: ");
-        /*Вывод комплексных чисел*/
-        first_compex_num.show_complex_num();
-        second_compex_num.show_complex_num();
-        /*Арифметика комплексных чисел*/
-    } //Четвертое задание //НЕ ГОТОВО
+    static void Task_Four(){} //Четвертое задание //НЕ ГОТОВО
     static void Task_Five(){
         /*Значения для конструктора уравнения*/
         int a;
