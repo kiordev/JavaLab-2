@@ -79,6 +79,7 @@ public class Main {
 
     } //Пятое задание
     static void Task_Six(){
+        System.out.println("Проверка гитхаба");
     } //Шестое задание
     static void Task_Seven(){
     } //Седьмое задание

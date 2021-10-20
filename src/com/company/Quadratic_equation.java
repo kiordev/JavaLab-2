@@ -16,8 +16,8 @@ public class Quadratic_equation { //Поля для задания квадра�
     }
 
     void show_equation(){
-
         System.out.println(a+"x^2"+"+"+b+"x"+"+"+c+"=0");
+        System.out.println("Проверка гитхаба");
     }
 
 
