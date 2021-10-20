@@ -104,15 +104,10 @@ public class Main {
 
     } //Пятое задание
     static void Task_Six(){
-        System.out.println("Проверка гита");
-        System.out.println("Проверка гита");
-        System.out.println("Проверка гита");
     } //Шестое задание
     static void Task_Seven(){
-        System.out.println("Проверка гита");
     } //Седьмое задание
     static void Task_Eight(){
-        System.out.println("Проверка гита");
     } // Восьмое задание
     /* Task List */
     public static void main(String[] args) {
