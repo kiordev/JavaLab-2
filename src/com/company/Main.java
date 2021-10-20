@@ -103,7 +103,9 @@ public class Main {
         }
 
     } //Пятое задание
-    static void Task_Six(){} //Шестое задание
+    static void Task_Six(){
+        System.out.println("Проверка гита");
+    } //Шестое задание
     static void Task_Seven(){} //Седьмое задание
     static void Task_Eight(){} // Восьмое задание
     /* Task List */
