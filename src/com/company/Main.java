@@ -106,8 +106,12 @@ public class Main {
     static void Task_Six(){
         System.out.println("Проверка гита");
     } //Шестое задание
-    static void Task_Seven(){} //Седьмое задание
-    static void Task_Eight(){} // Восьмое задание
+    static void Task_Seven(){
+        System.out.println("Проверка гита");
+    } //Седьмое задание
+    static void Task_Eight(){
+        System.out.println("Проверка гита");
+    } // Восьмое задание
     /* Task List */
     public static void main(String[] args) {
         int global_user_choose = 0; //Глобальная переменная для выбора

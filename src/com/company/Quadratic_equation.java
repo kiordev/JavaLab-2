@@ -8,6 +8,7 @@ public class Quadratic_equation { //Поля для задания квадра�
     public static int c;
 
 
+
     public Quadratic_equation(int a, int b, int c){ //Конструктор квадратного уравнения
         this.a = a;
         this.b = b;
@@ -15,7 +16,9 @@ public class Quadratic_equation { //Поля для задания квадра�
     }
 
     void show_equation(){
+
         System.out.println(a+"x^2"+"+"+b+"x"+"+"+c+"=0");
+        System.out.println("Проверка гита");
     }
 
 
