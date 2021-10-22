@@ -211,6 +211,13 @@ public class Main {
 
 
     } // Восьмое задание
+    static void Task_Test(){
+        int[] test_array = new int[]{1,2,3,4,5,6,7};
+        System.out.println("Массив: ");
+        for(int i = 0; i < test_array.length; i++){
+            System.out.println();
+        }
+    } //Функция для тесирований
     /* Task List */
     public static void main(String[] args) {
         int global_user_choose = 0; //Глобальная переменная для выбора
@@ -250,6 +257,9 @@ public class Main {
             }
             else if(global_user_choose == 8){
                 Task_Eight();
+            }
+            else if(global_user_choose == 9){
+                Task_Test();
             }
             else{
                 System.out.println("Ошибка, введите верное значение");
