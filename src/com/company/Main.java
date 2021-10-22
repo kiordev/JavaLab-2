@@ -163,9 +163,10 @@ public class Main {
             /*Вычисление победителя*/
             for(int i = 0; i<game_players.length; i++){
                 if(game_players[i].value_of_wins==7){
-                    System.out.println("Игрок номер: "+game_players[i]+"-победитель");
+                    System.out.println("Игрок номер: "+game_players[i]+" -победитель");
                     counter=100;
                 }
+                counter=100;
             }
         }
 
