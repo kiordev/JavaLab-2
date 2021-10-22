@@ -144,7 +144,7 @@ public class Main {
             game_players[0].value_of_wins+=1;
         }
 
-        System.out.println("Начало игрыы");
+        System.out.println("Начало игры");
     } //Шестое задание
     static void Task_Seven(){
     } //Седьмое задание
