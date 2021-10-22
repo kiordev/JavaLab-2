@@ -166,7 +166,6 @@ public class Main {
                     System.out.println("Игрок номер: "+game_players[i]+" -победитель");
                     counter=100;
                 }
-                counter=100;
             }
         }
 
