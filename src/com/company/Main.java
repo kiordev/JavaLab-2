@@ -122,11 +122,26 @@ public class Main {
         while(GameIsOne = true){
             for(int i = 0; i<game_players.length; i++){
                 System.out.println("Очередь игрока: "+game_players[i].player_name);
-                for(int j = 0;j< gamecubes.length;i++){
+                for(int j = 0; j< gamecubes.length; i++){
                     game_players[i].GameCubeThrow();
                     game_players[i].main_points += Player.GameCube.after_throw_value;
                 }
             }
+            /*Сортировка результатов после игрового этапа*/
+            for (int i = 0; i < game_players.length; i++) {
+                Player temp;
+                if(game_players[i].main_points > game_players[i+1].main_points){
+                    temp = game_players[i];
+                    game_players[i] = game_players[i+1];
+                    game_players[i+1] = temp;
+                }
+            }
+            /*Вывод рейтинга игроков, первое место = +1 победа*/
+            System.out.println("Рейтинг игроков после первого этапа игры");
+            for(int i = 0; i < game_players.length; i++){
+                System.out.println("Место №"+(i+1)+game_players[i]);
+            }
+            game_players[0].value_of_wins+=1;
         }
 
         System.out.println("Начало игры");

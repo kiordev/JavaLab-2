@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Player {
     String player_name;
-    int value_of_wins; //Количество побед
+    int value_of_wins = 0; //Количество побед
     int main_points; //Переменная для количества очков после каждого броска
 
     /*Конструктор для регистрации*/
