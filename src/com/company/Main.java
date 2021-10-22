@@ -89,7 +89,7 @@ public class Main {
         Player[] game_players = new Player[players_val];
 
         /*Создание игроков для игры в кубики*/
-        for(int i=0;i< game_players.length;i++){
+        for(int i = 0; i < game_players.length; i++){
             String players_name;
             Scanner player_name_enter = new Scanner(System.in);
             System.out.println("Введите имя игрока номер - " + (i+1));
@@ -99,11 +99,33 @@ public class Main {
 
         /*Вывод списка всех игроков*/
         System.out.println("Список всех игроков: ");
-        for(int i=0; i < game_players.length; i++){
-            System.out.println("Игрок номер "+ (i+1)+":"+ game_players[i].player_name);
+        for(int i = 0; i < game_players.length; i++){
+            System.out.println("Игрок номер "+ (i + 1) + ":" + game_players[i].player_name);
         }
 
+        /*Создание кубиков*/
+        int cube_val;
+        Scanner cube_val_enter = new Scanner(System.in);
+        System.out.println("Введите количество кубиков для игры: ");
+        cube_val = cube_val_enter.nextInt();
 
+        /*Создание массива из K кубиков*/
+        Player.GameCube[] gamecubes = new Player.GameCube[cube_val];
+
+        /*Создание объектов кубиков*/
+        for(int i = 0; i < gamecubes.length; i++){
+            gamecubes[i] = new Player.GameCube();
+        }
+
+        /*Основной цикл игры*/
+        boolean GameIsOne = true;
+        while(GameIsOne = true){
+            for(int i = 0; i<game_players.length; i++){
+                //game_players[i]
+            }
+        }
+
+        System.out.println("Начало игры");
     } //Шестое задание
     static void Task_Seven(){
     } //Седьмое задание
