@@ -121,7 +121,11 @@ public class Main {
         boolean GameIsOne = true;
         while(GameIsOne = true){
             for(int i = 0; i<game_players.length; i++){
-                //game_players[i]
+                System.out.println("Очередь игрока: "+game_players[i].player_name);
+                for(int j = 0;j< gamecubes.length;i++){
+                    game_players[i].GameCubeThrow();
+                    game_players[i].main_points+= Player.GameCube.after_throw_value;
+                }
             }
         }
 
