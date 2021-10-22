@@ -124,7 +124,7 @@ public class Main {
                 System.out.println("Очередь игрока: "+game_players[i].player_name);
                 for(int j = 0;j< gamecubes.length;i++){
                     game_players[i].GameCubeThrow();
-                    game_players[i].main_points+= Player.GameCube.after_throw_value;
+                    game_players[i].main_points += Player.GameCube.after_throw_value;
                 }
             }
         }
