@@ -92,7 +92,7 @@ public class Main {
         for(int i=0;i< game_players.length;i++){
             String players_name;
             Scanner player_name_enter = new Scanner(System.in);
-            System.out.println("Введите имя игрока номер - " + i);
+            System.out.println("Введите имя игрока номер - " + (i+1));
             players_name = player_name_enter.nextLine();
             game_players[i] = new Player(players_name);
         }
@@ -100,7 +100,7 @@ public class Main {
         /*Вывод списка всех игроков*/
         System.out.println("Список всех игроков: ");
         for(int i=0; i < game_players.length; i++){
-            System.out.println("Игрок номер "+ i + game_players[i].player_name);
+            System.out.println("Игрок номер "+ (i+1)+":"+ game_players[i].player_name);
         }
 
 
