@@ -79,6 +79,31 @@ public class Main {
 
     } //Пятое задание
     static void Task_Six(){
+        int players_val;
+        Scanner player_val_enter = new Scanner(System.in);
+        System.out.println("Игра к кости");
+        System.out.println("Введите количество игроков для игры:");
+        players_val= player_val_enter.nextInt();
+
+        /*Создание массива со списком игроков*/
+        Player[] game_players = new Player[players_val];
+
+        /*Создание игроков для игры в кубики*/
+        for(int i=0;i< game_players.length;i++){
+            String players_name;
+            Scanner player_name_enter = new Scanner(System.in);
+            System.out.println("Введите имя игрока номер - " + i);
+            players_name = player_name_enter.nextLine();
+            game_players[i] = new Player(players_name);
+        }
+
+        /*Вывод списка всех игроков*/
+        System.out.println("Список всех игроков: ");
+        for(int i=0; i < game_players.length; i++){
+            System.out.println("Игрок номер "+ i + game_players[i].player_name);
+        }
+
+
     } //Шестое задание
     static void Task_Seven(){
     } //Седьмое задание
