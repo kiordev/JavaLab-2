@@ -109,6 +109,10 @@ public class Main {
         System.out.println("Введите количество кубиков для игры: ");
         cube_val = cube_val_enter.nextInt();
 
+        if(cube_val<0){
+            System.out.println("Critical Error");
+        }
+
         /*Создание массива из K кубиков*/
         Player.GameCube[] gamecubes = new Player.GameCube[cube_val];
 
@@ -118,7 +122,9 @@ public class Main {
         }
 
         /*Основной цикл игры*/
-        for(int counter = 0; counter<=10; counter++){
+        boolean GameIsOne = false;
+        while(GameIsOne==true){
+            int counter = 1;
             System.out.println("---------------------------------");
             System.out.println("Раунд номер - "+counter);
             System.out.println("---------------------------------");
@@ -164,15 +170,17 @@ public class Main {
             for(int i = 0; i<game_players.length; i++){
                 if(game_players[i].value_of_wins==7){
                     System.out.println("Игрок номер: "+game_players[i].player_name+" -победитель");
-                    counter=100;
+                    GameIsOne=false;
                 }
             }
+            counter++;
         }
+
 
     } //Шестое задание
     static void Task_Seven(){
-        System.out.println("Adress");
-    } //Седьмое задание
+
+    }
     static void Task_Eight(){
         /* Аргументы для ввода */
         double x;
