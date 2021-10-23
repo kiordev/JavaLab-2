@@ -118,7 +118,7 @@ public class Main {
         }
 
         /*Основной цикл игры*/
-        for(int counter = 0; counter<=100; counter++){
+        for(int counter = 0; counter<=10; counter++){
             System.out.println("---------------------------------");
             System.out.println("Раунд номер - "+counter);
             System.out.println("---------------------------------");
@@ -140,7 +140,7 @@ public class Main {
                     }
                 }
             }
-            game_players[0].value_of_wins+=1; //Прибавления побед победителю раунда
+            game_players[game_players.length-1].value_of_wins+=1; //Прибавления побед победителю раунда
             /*Вывод количества побед*/
             System.out.println("---------------------------------");
             System.out.println("Количество побед: ");
@@ -163,7 +163,7 @@ public class Main {
             /*Вычисление победителя*/
             for(int i = 0; i<game_players.length; i++){
                 if(game_players[i].value_of_wins==7){
-                    System.out.println("Игрок номер: "+game_players[i]+" -победитель");
+                    System.out.println("Игрок номер: "+game_players[i].player_name+" -победитель");
                     counter=100;
                 }
             }
