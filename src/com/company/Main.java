@@ -36,7 +36,11 @@ public class Main {
 
 
     } //Второе задание
-    static void Task_Three(){} //Третье задание //НЕ ГОТОВО
+    static void Task_Three(){
+        System.out.println("Генератор треугольника Паскаля");
+        PascalsTriangle triangle = new PascalsTriangle(6);
+        triangle.generatePascalsTriangle();
+    } //Третье задание //НЕ ГОТОВО
     static void Task_Four(){} //Четвертое задание //НЕ ГОТОВО
     static void Task_Five(){
         /*Значения для конструктора уравнения*/
