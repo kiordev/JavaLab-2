@@ -171,6 +171,7 @@ public class Main {
 
     } //Шестое задание
     static void Task_Seven(){
+        System.out.println("Adress");
     } //Седьмое задание
     static void Task_Eight(){
         /* Аргументы для ввода */
