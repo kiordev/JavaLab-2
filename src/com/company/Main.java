@@ -36,7 +36,11 @@ public class Main {
 
 
     } //Второе задание
-    static void Task_Three(){} //Третье задание //НЕ ГОТОВО
+    static void Task_Three(){
+        System.out.println("Генератор треугольника Паскаля");
+        PascalsTriangle triangle = new PascalsTriangle(6);
+        triangle.generatePascalsTriangle();
+    } //Третье задание //НЕ ГОТОВО
     static void Task_Four(){} //Четвертое задание //НЕ ГОТОВО
     static void Task_Five(){
         /*Значения для конструктора уравнения*/
@@ -109,6 +113,10 @@ public class Main {
         System.out.println("Введите количество кубиков для игры: ");
         cube_val = cube_val_enter.nextInt();
 
+        if(cube_val<0){
+            System.out.println("Critical Error");
+        }
+
         /*Создание массива из K кубиков*/
         Player.GameCube[] gamecubes = new Player.GameCube[cube_val];
 
@@ -118,7 +126,9 @@ public class Main {
         }
 
         /*Основной цикл игры*/
-        for(int counter = 0; counter<=100; counter++){
+        boolean GameIsOne = false;
+        while(GameIsOne==true){
+            int counter = 1;
             System.out.println("---------------------------------");
             System.out.println("Раунд номер - "+counter);
             System.out.println("---------------------------------");
@@ -140,7 +150,7 @@ public class Main {
                     }
                 }
             }
-            game_players[0].value_of_wins+=1; //Прибавления побед победителю раунда
+            game_players[game_players.length-1].value_of_wins+=1; //Прибавления побед победителю раунда
             /*Вывод количества побед*/
             System.out.println("---------------------------------");
             System.out.println("Количество побед: ");
@@ -163,15 +173,18 @@ public class Main {
             /*Вычисление победителя*/
             for(int i = 0; i<game_players.length; i++){
                 if(game_players[i].value_of_wins==7){
-                    System.out.println("Игрок номер: "+game_players[i]+" -победитель");
-                    counter=100;
+                    System.out.println("Игрок номер: "+game_players[i].player_name+" -победитель");
+                    GameIsOne=false;
                 }
             }
+            counter++;
         }
+
 
     } //Шестое задание
     static void Task_Seven(){
-    } //Седьмое задание
+
+    }
     static void Task_Eight(){
         /* Аргументы для ввода */
         double x;
