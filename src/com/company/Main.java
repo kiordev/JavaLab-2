@@ -33,6 +33,8 @@ public class Main {
             System.out.println(fibonachi_nums[i]+" ");
         }
 
+        System.out.println("Artem Dodik");
+
 
 
     } //Второе задание
@@ -225,12 +227,7 @@ public class Main {
 
     } // Восьмое задание
     static void Task_Test(){
-        int[] test_array = new int[]{1,2,3,4,5,6,7};
-        System.out.println("Массив: ");
-        for(int i = 0; i < test_array.length; i++){
-            System.out.println();
-        }
-    } //Функция для тесирований
+    } //Функция для тестирований
     /* Task List */
     public static void main(String[] args) {
         int global_user_choose = 0; //Глобальная переменная для выбора
