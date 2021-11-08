@@ -13,7 +13,7 @@ public class Calculate {
         this.step = step;
     }
 
-    void function_one(){
+    void function_one(){ //Первая предложенная функция и её алгоритм
         double x_result = 0;
         System.out.println("Ответы: ");
         double i = begin;
@@ -25,7 +25,7 @@ public class Calculate {
         }
     }
 
-    void function_two(){
+    void function_two(){ //Вторая предложенная функция и её алгоритм
         double x_result = 0;
         System.out.println("Ответы: ");
         double i = begin;
