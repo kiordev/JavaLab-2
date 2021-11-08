@@ -41,7 +41,18 @@ public class Main {
         PascalsTriangle triangle = new PascalsTriangle(6);
         triangle.generatePascalsTriangle();
     } //Третье задание //НЕ ГОТОВО
-    static void Task_Four(){} //Четвертое задание //НЕ ГОТОВО
+    static void Task_Four(){
+        Complex z = new Complex(3, 2);
+        z = z.div(z);
+        System.out.println(z);
+        System.out.println();
+        Complex u = new Complex(0, 0);
+        Complex v = new Complex(1, 0);
+        Complex a = u.rotate(v, Math.PI * 1.0);
+        Complex b = v.rot90().rot90();
+        System.out.println(a);
+        System.out.println(b);
+    } //Четвертое задание
     static void Task_Five(){
         /*Значения для конструктора уравнения*/
         int a;
@@ -224,13 +235,6 @@ public class Main {
 
 
     } // Восьмое задание
-    static void Task_Test(){
-        int[] test_array = new int[]{1,2,3,4,5,6,7};
-        System.out.println("Массив: ");
-        for(int i = 0; i < test_array.length; i++){
-            System.out.println();
-        }
-    } //Функция для тесирований
     /* Task List */
     public static void main(String[] args) {
         int global_user_choose = 0; //Глобальная переменная для выбора
@@ -270,9 +274,6 @@ public class Main {
             }
             else if(global_user_choose == 8){
                 Task_Eight();
-            }
-            else if(global_user_choose == 9){
-                Task_Test();
             }
             else{
                 System.out.println("Ошибка, введите верное значение");
