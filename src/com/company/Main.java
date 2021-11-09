@@ -189,6 +189,47 @@ public class Main {
         }
     } //Шестое задание
     static void Task_Seven(){
+        System.out.println("Седьмое задание");
+
+        int objects_count;
+        Scanner objects_count_enter = new Scanner(System.in);
+        System.out.println("Введите количество персон: ");
+        objects_count = objects_count_enter.nextInt();
+
+        Human[] Humans = new Human[objects_count];
+        System.out.println("Введите данные про людей: ");
+        for(int i = 0; i<Humans.length; i++){
+            System.out.println("Данные - Фамилия, Адрес-улица, Адрес - дом");
+            System.out.println("Человек №"+(i+1));
+            String forname_to_enter;
+            Scanner forname_enter = new Scanner(System.in);
+            forname_to_enter = forname_enter.nextLine();
+            Humans[i] = new Human(forname_to_enter);
+        }
+        System.out.println("---------------------------");
+        System.out.println("База всех людей: ");
+        for(int i = 0; i< Humans.length; i++){
+            System.out.println(Humans[i].surname);
+        }
+
+        int local_user_choose;
+        Scanner local_user_choose_num = new Scanner(System.in);
+        System.out.println("Функции: ");
+        System.out.println("1 - Поиск по фамилии");
+        System.out.println("2 - Поиск по адресу");
+        System.out.println("3 - Вывод людей родившихся между опреленными датами");
+        System.out.println("4 - Найти самого старого");
+        System.out.println("5 - Найти людей с одной улицы");
+        local_user_choose = local_user_choose_num.nextInt();
+        if (local_user_choose==1){
+            String human_surname;
+            Scanner human_surname_to_enter = new Scanner(System.in);
+            System.out.println("Введите фамилию человека: ");
+            human_surname = human_surname_to_enter.nextLine();
+
+        }
+
+
 
     }
     static void Task_Eight(){
