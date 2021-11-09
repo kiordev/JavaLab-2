@@ -189,7 +189,41 @@ public class Main {
         }
     } //Шестое задание
     static void Task_Seven(){
+        System.out.println("Седьмое задание: ");
+        int humans_array_value;
+        Scanner enter_humans_array_value = new Scanner(System.in);
 
+        System.out.println("Введите количество человек: ");
+        humans_array_value = enter_humans_array_value.nextInt();
+        Human[] humans_database = new Human[humans_array_value];
+
+        System.out.println("Введите данные о людях: ");
+        for(int i = 0; i<humans_database.length; i++){
+            String human_surname;
+            Scanner enter_human_surname = new Scanner(System.in);
+            String human_street;
+            Scanner enter_human_street = new Scanner(System.in);
+            int human_house;
+            Scanner enter_human_house = new Scanner(System.in);
+
+            System.out.println("Ввод информации персоны №"+(i+1));
+            System.out.println("Фамилия, улица, номер дома");
+            human_surname = enter_human_surname.nextLine();
+            human_street = enter_human_street.nextLine();
+            human_house = enter_human_house.nextInt();
+            humans_database[i] = new Human(human_surname,human_street,human_house);
+        }
+        System.out.println("База людей создана");
+        System.out.println("====================");
+        System.out.println("Cозданная база: ");
+
+        for(int i = 0; i<humans_database.length; i++){
+            System.out.println("==================");
+            System.out.println("Запись номер - "+(i+1));
+            System.out.println("Фамилия: "+humans_database[i].surname);
+            System.out.println("Улица: "+humans_database[i].home_adress.street);
+            System.out.println("Номер дома: "+humans_database[i].home_adress.house);
+        }
     }
     static void Task_Eight(){
         /* Аргументы для ввода */
