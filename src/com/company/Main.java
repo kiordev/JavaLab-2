@@ -32,9 +32,6 @@ public class Main {
         for(int i = 0; i<fibonachi_nums.length; i++){
             System.out.println(fibonachi_nums[i]+" ");
         }
-
-
-
     } //Второе задание
     static void Task_Three(){
         System.out.println("Генератор треугольника Паскаля");

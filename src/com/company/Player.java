@@ -24,6 +24,4 @@ public class Player {
     static class GameCube {
         static int after_throw_value;
     }
-
-
 }

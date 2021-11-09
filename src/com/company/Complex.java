@@ -87,17 +87,5 @@ public class Complex {
     public String toString() {
         return "Complex [x=" + x + ", y=" + y + "]";
     }
-    // Usage example
-    public static void main(String[] args) {
-        Complex z = new Complex(3, 2);
-        z = z.div(z);
-        System.out.println(z);
-        System.out.println();
-        Complex u = new Complex(0, 0);
-        Complex v = new Complex(1, 0);
-        Complex a = u.rotate(v, Math.PI * 1.0);
-        Complex b = v.rot90().rot90();
-        System.out.println(a);
-        System.out.println(b);
-    }
+
 }
