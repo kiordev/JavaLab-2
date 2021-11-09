@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Scanner;
 
-public class HumanDataBase {
+public class Human {
+    String surname;
 
 }

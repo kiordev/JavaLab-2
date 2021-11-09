@@ -189,6 +189,7 @@ public class Main {
         }
     } //Шестое задание
     static void Task_Seven(){
+
     }
     static void Task_Eight(){
         /* Аргументы для ввода */
