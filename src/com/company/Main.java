@@ -40,7 +40,7 @@ public class Main {
         System.out.println("Генератор треугольника Паскаля");
         PascalsTriangle triangle = new PascalsTriangle(6);
         triangle.generatePascalsTriangle();
-    } //Третье задание //НЕ ГОТОВО
+    } //Третье задание
     static void Task_Four(){
         Complex z = new Complex(3, 2);
         z = z.div(z);
@@ -127,69 +127,71 @@ public class Main {
         if(cube_val<0){
             System.out.println("Critical Error");
         }
-
-        /*Создание массива из K кубиков*/
-        Player.GameCube[] gamecubes = new Player.GameCube[cube_val];
-
-        /*Создание объектов кубиков*/
-        for(int i = 0; i < gamecubes.length; i++){
-            gamecubes[i] = new Player.GameCube();
-        }
-
-        /*Основной цикл игры*/
-        boolean GameIsOne = false;
-        while(GameIsOne==true){
-            int counter = 1;
-            System.out.println("---------------------------------");
-            System.out.println("Раунд номер - "+counter);
-            System.out.println("---------------------------------");
-            for(int i = 0; i < game_players.length; i++){
-                System.out.println("Очередь игрока: "+game_players[i].player_name);
-                for(int j = 0; j <  gamecubes.length; j++){
-                    game_players[i].GameCubeThrow();
-                    game_players[i].main_points += gamecubes[j].after_throw_value;
-                }
-                System.out.println("Результат игрока "+game_players[i].player_name+":"+game_players[i].main_points);
+        else{
+            /*Создание массива из K кубиков*/
+            Player.GameCube[] gamecubes = new Player.GameCube[cube_val];
+            /*Создание объектов кубиков*/
+            for(int i = 0; i < gamecubes.length; i++){
+                gamecubes[i] = new Player.GameCube();
             }
-            /*Пузырьковая сортировка результатов после игрового этапа*/
-            for (int i = 0; i < game_players.length; i++) {
-                for (int j = 0; j < game_players.length-1; j++) {
-                    if (game_players[j].main_points > game_players[j+1].main_points) {
-                        Player b = game_players[j];
-                        game_players[j] = game_players[j + 1];
-                        game_players[j+1] = b;
+
+            /*Основной цикл игры*/
+            boolean GameIsOne = true;
+            int counter = 1;
+            while(GameIsOne==true){
+                System.out.println("---------------------------------");
+                System.out.println("Раунд номер - "+counter);
+                System.out.println("---------------------------------");
+                for(int i = 0; i < game_players.length; i++){
+                    System.out.println("Очередь игрока: "+game_players[i].player_name);
+                    for(int j = 0; j <  gamecubes.length; j++){
+                        game_players[i].GameCubeThrow();
+                        game_players[i].main_points += gamecubes[j].after_throw_value;
+                    }
+                    System.out.println("Результат игрока "+game_players[i].player_name+":"+game_players[i].main_points);
+                }
+                /*Пузырьковая сортировка результатов после игрового этапа*/
+                for (int i = 0; i < game_players.length; i++) {
+                    for (int j = 0; j < game_players.length-1; j++) {
+                        if (game_players[j].main_points > game_players[j+1].main_points) {
+                            Player b = game_players[j];
+                            game_players[j] = game_players[j + 1];
+                            game_players[j+1] = b;
+                        }
                     }
                 }
-            }
-            game_players[game_players.length-1].value_of_wins+=1; //Прибавления побед победителю раунда
-            /*Вывод количества побед*/
-            System.out.println("---------------------------------");
-            System.out.println("Количество побед: ");
-            for(int i = 0; i < game_players.length; i++){
-                System.out.println(game_players[i].player_name+" : "+game_players[i].value_of_wins);
-            }
-            /*Вывод рейтинга игроков, первое место = +1 победа*/
-            System.out.println("---------------------------------");
-            System.out.println("Рейтинг игроков после раунда:"+counter);
-            for(int i = 0; i < game_players.length; i++){
-                System.out.println("Место №"+(i+1)+" "+game_players[i].player_name);
-            }
-            game_players[0].value_of_wins+=1;
-            System.out.println("---------------------------------");
-
-            /*Обнуление количества очков после раунда*/
-            for(int i = 0; i<game_players.length; i++){
-                game_players[i].main_points = 0;
-            }
-            /*Вычисление победителя*/
-            for(int i = 0; i<game_players.length; i++){
-                if(game_players[i].value_of_wins==7){
-                    System.out.println("Игрок номер: "+game_players[i].player_name+" -победитель");
-                    GameIsOne=false;
+                game_players[game_players.length-1].value_of_wins+=1; //Прибавления побед победителю раунда
+                /*Вывод количества побед*/
+                System.out.println("---------------------------------");
+                System.out.println("Количество побед: ");
+                for(int i = 0; i < game_players.length; i++){
+                    System.out.println(game_players[i].player_name+" : "+game_players[i].value_of_wins);
                 }
+                /*Вывод рейтинга игроков, первое место = +1 победа*/
+                System.out.println("---------------------------------");
+                System.out.println("Рейтинг игроков после раунда:"+counter);
+                for(int i = 0; i < game_players.length; i++){
+                    System.out.println("Место №"+(i+1)+" "+game_players[i].player_name);
+                }
+                game_players[0].value_of_wins+=1;
+                System.out.println("---------------------------------");
+
+                /*Обнуление количества очков после раунда*/
+                for(int i = 0; i<game_players.length; i++){
+                    game_players[i].main_points = 0;
+                }
+                /*Вычисление победителя*/
+                for(int i = 0; i<game_players.length; i++){
+                    if(game_players[i].value_of_wins==7){
+                        System.out.println("Игрок номер: "+game_players[i].player_name+" -победитель");
+                        GameIsOne=false;
+                    }
+                }
+                counter++;
             }
-            counter++;
         }
+
+
 
 
     } //Шестое задание
