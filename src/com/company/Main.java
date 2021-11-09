@@ -190,10 +190,6 @@ public class Main {
                 counter++;
             }
         }
-
-
-
-
     } //Шестое задание
     static void Task_Seven(){
 
@@ -207,7 +203,7 @@ public class Main {
         double end;
         Scanner end_num = new Scanner(System.in);
         double step;
-        Scanner step_num = new Scanner(System.in);
+        Scanner step_num = new Scanner(System.in);;
 
         int user_choose = 0;
         Scanner user_choose_num = new Scanner(System.in);
