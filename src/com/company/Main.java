@@ -193,10 +193,11 @@ public class Main {
         int humans_array_value;
         Scanner enter_humans_array_value = new Scanner(System.in);
 
+        /*Регистрация количества записей в списке*/
         System.out.println("Введите количество человек: ");
         humans_array_value = enter_humans_array_value.nextInt();
         Human[] humans_database = new Human[humans_array_value];
-
+        /*Ввод данных про людей, записи*/
         System.out.println("Введите данные о людях: ");
         for(int i = 0; i<humans_database.length; i++){
             String human_surname;
@@ -205,7 +206,7 @@ public class Main {
             Scanner enter_human_street = new Scanner(System.in);
             int human_house;
             Scanner enter_human_house = new Scanner(System.in);
-
+            /*Ввод полей для записей*/
             System.out.println("Ввод информации персоны №"+(i+1));
             System.out.println("Фамилия, улица, номер дома");
             human_surname = enter_human_surname.nextLine();
@@ -224,6 +225,47 @@ public class Main {
             System.out.println("Улица: "+humans_database[i].home_adress.street);
             System.out.println("Номер дома: "+humans_database[i].home_adress.house);
         }
+        /*Прописанный функционал приложения*/
+        int local_user_choose;
+        Scanner enter_local_user_choose = new Scanner(System.in);
+        System.out.println("Функции: ");
+        System.out.println("1 - Поиск человека по фамилии");
+        System.out.println("2 - Поиск человека по адресу");
+        System.out.println("3 - Поиск людей живущих на одной улице");
+        System.out.println("Введите: ");
+        local_user_choose = enter_local_user_choose.nextInt();
+
+        /*Поиск по фамилии*/
+        if(local_user_choose==1){
+            String surname_to_find;
+            Scanner enter_surname_to_find = new Scanner(System.in);
+            System.out.println("Введите фамилию: ");
+            surname_to_find = enter_surname_to_find.nextLine();
+            for(int i = 0; i<humans_database.length; i++){
+                if(surname_to_find.equals(humans_database[i].surname)){
+                    System.out.println("Фамилия найдена под записью: "+(i+1));
+                }
+            }
+        }
+
+        /*Поиск по адресу*/
+        if(local_user_choose==2){
+            String address_human_find;
+            Scanner enter_address_human_find = new Scanner(System.in);
+            int address_human_number;
+            Scanner enter_address_human_number = new Scanner(System.in);
+            System.out.println("Введите улицу: ");
+            address_human_find = enter_address_human_find.nextLine();
+            System.out.println("Введите номер дома: ");
+            address_human_number = enter_address_human_number.nextInt();
+
+            for(int i = 0; i<humans_database.length; i++){
+                if(address_human_find.equals(humans_database[i].home_adress.street) && address_human_number ==humans_database[i].home_adress.house){
+                    System.out.println("Найден адрес в записи номер: "+(i+1));
+                }
+            }
+        }
+
     }
     static void Task_Eight(){
         /* Аргументы для ввода */
