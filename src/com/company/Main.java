@@ -247,7 +247,6 @@ public class Main {
                 }
             }
         }
-
         /*Поиск по адресу*/
         if(local_user_choose==2){
             String address_human_find;
@@ -260,8 +259,22 @@ public class Main {
             address_human_number = enter_address_human_number.nextInt();
 
             for(int i = 0; i<humans_database.length; i++){
-                if(address_human_find.equals(humans_database[i].home_adress.street) && address_human_number ==humans_database[i].home_adress.house){
+                if(address_human_find.equals(humans_database[i].home_adress.street) && address_human_number == humans_database[i].home_adress.house){
                     System.out.println("Найден адрес в записи номер: "+(i+1));
+                }
+            }
+        }
+        /*Поиск людей живущих на одной улице*/
+        if(local_user_choose==3){
+            String find_street;
+            Scanner enter_find_street = new Scanner(System.in);
+            System.out.println("Введите улицу для нахождения: ");
+            find_street = enter_find_street.nextLine();
+
+            System.out.println("Список людей живущих по адресу: " + find_street);
+            for(int i=0; i<humans_database.length; i++){
+                if(humans_database[i].home_adress.street.equals(find_street)){
+                    System.out.println((i+1)+")"+humans_database[i].surname);
                 }
             }
         }
