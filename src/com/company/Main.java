@@ -279,7 +279,7 @@ public class Main {
             }
         }
 
-    }
+    } //Седьмое задание
     static void Task_Eight(){
         /* Аргументы для ввода */
         double x;
